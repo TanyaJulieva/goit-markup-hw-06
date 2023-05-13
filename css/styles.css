@@ -417,7 +417,8 @@ body {
 
   transition: color var(--transition-dur-and-func),
     background-color var(--transition-dur-and-func),
-    border-color var(--transition-dur-and-func), box-shadow var(--transition-dur-and-func);
+    border-color var(--transition-dur-and-func),
+    box-shadow var(--transition-dur-and-func);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -604,7 +605,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+
   width: 408px;
   min-height: 576px;
   padding: 72px 24px 24px 24px;
@@ -614,7 +615,7 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform var(--transition-dur-and-func)
+  transition: transform var(--transition-dur-and-func);
 }
 
 .backdrop.is-hidden .modal {
@@ -695,10 +696,13 @@ body {
 
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+
+  transition: border var(--transition-dur-and-func);
 }
 
 .form-field:focus {
   border: 1px solid rgba(77, 90, 229, 1);
+  outline: none;
 }
 
 .form-icon {
@@ -706,8 +710,86 @@ body {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
+
+  transition: fill var(--transition-dur-and-func);
+  pointer-events: none;
 }
 
-.form-field:focus .form-icon{
+.form-field:focus + .form-icon {
   fill: var(--cta-color);
 }
+
+.form-comment {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+
+  transition: border var(--transition-dur-and-func);
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.form-comment:focus {
+  border: 1px solid rgba(77, 90, 229, 1);
+  outline: none;
+}
+
+.form-agreement {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.form-agreement-text {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--customer-icon-color);
+}
+
+.form-btn {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+  margin: 0 auto;
+
+  transition: background-color var(--transition-dur-and-func);
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white-txt-color);
+
+  background: var(--cta-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-btn:hover,
+.form-btn:focus {
+  background-color: var(--active-color);
+}
+
+.unchecked {
+  opacity: 1;
+}
+
+.checked {
+  opacity: 0;
+}
+

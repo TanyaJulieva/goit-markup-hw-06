@@ -608,20 +608,24 @@
               <use href="./images/icons.svg#email"></use>
             </svg>
             </div>
-          <label>
+          <label class="form-label" for="user-comment">
             Comment
           </label>
-            <textarea
-              name=""
-              id=""
+            <textarea class="form-comment"
+              name="comment"
+              id="user-comment"
               rows="5"
               placeholder="Text input"
             ></textarea>
-          <label for="">
+          <label class="form-agreement">
             <input type="checkbox">
-            <span>I accept the terms and conditions of the <a href="">Privacy Policy</a></span>
+            <svg class="check-icon" width="16" height="16">
+              <use class="unchecked" href="./images/icons.svg#default"></use>
+              <use class="checked" href="./images/icons.svg#click"></use>
+            </svg>
+            <span class="form-agreement-text">I accept the terms and conditions of the <a href="">Privacy Policy</a></span>
           </label>
-          <button type="submit">Send</button>
+          <button class="form-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
