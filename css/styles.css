@@ -547,6 +547,10 @@ body {
   color: var(--white-txt-color);
 }
 
+.footer-social {
+  margin-right: 80px;
+}
+
 .footer-social-list {
   display: flex;
   gap: 16px;
@@ -576,6 +580,70 @@ body {
 
 .footer-social-icon {
   fill: var(--txt-color-dark-theme);
+}
+
+.footer-form {
+  display: flex;
+  align-items: flex-end;
+}
+.footer-form-title {
+  display: block;
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white-txt-color);
+}
+
+.footer-form-field {
+  background-color: transparent;
+
+  margin-right: 24px;
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+
+  border: 1px solid var(--white-txt-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: transparent;
+
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--white-txt-color);
+}
+
+.footer-form-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 165px;
+  height: 40px;
+  padding: 8px 24px;
+  outline: transparent;
+
+  cursor: pointer;
+
+  background-color: var(--cta-color);
+  border: none;
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white-txt-color);
+
+  transition: background-color var(--transition-dur-and-func);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: var(--active-color);
+  border: none;
 }
 
 /* Modal window */
@@ -757,6 +825,10 @@ body {
   color: var(--customer-icon-color);
 }
 
+.form-agreement-link {
+  color: var(--logo-txt-color);
+}
+
 .form-btn {
   display: block;
   min-width: 169px;
@@ -766,14 +838,13 @@ body {
 
   transition: background-color var(--transition-dur-and-func);
 
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white-txt-color);
 
-  background: var(--cta-color);
+  background-color: var(--cta-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
@@ -787,9 +858,18 @@ body {
 
 .unchecked {
   opacity: 1;
+  transition: var(--transition-dur-and-func);
 }
 
 .checked {
   opacity: 0;
+  transition: var(--transition-dur-and-func);
 }
 
+.form-check-input:checked + .check-icon > .unchecked {
+  opacity: 0;
+}
+
+.form-check-input:checked + .check-icon > .checked {
+  opacity: 1;
+}
