@@ -616,6 +616,10 @@ body {
   color: var(--white-txt-color);
 }
 
+.footer-form-field::placeholder {
+  color: var(--white-txt-color);
+}
+
 .footer-form-btn {
   display: flex;
   align-items: center;
@@ -781,6 +785,7 @@ body {
 
   transition: fill var(--transition-dur-and-func);
   pointer-events: none;
+  fill: var(--dark-bg-color);
 }
 
 .form-field:focus + .form-icon {
@@ -802,7 +807,7 @@ body {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
+  resize: none;
 }
 
 .form-comment:focus {
@@ -813,7 +818,6 @@ body {
 .form-agreement {
   display: flex;
   gap: 8px;
-  justify-content: center;
   align-items: center;
   margin-bottom: 24px;
 }
